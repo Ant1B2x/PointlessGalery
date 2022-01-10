@@ -3,5 +3,7 @@
     <dimen name="standard_margin">22dp</dimen>
     <dimen name="little_margin">12dp</dimen>
     <dimen name="big_margin">50dp</dimen>
-    <dimen name="title_size">25sp</dimen>
+    <dimen name="title_size">20sp</dimen>
+    <dimen name="picture_size">64sp</dimen>
+    <dimen name="little_text">16sp</dimen>
 </resources>

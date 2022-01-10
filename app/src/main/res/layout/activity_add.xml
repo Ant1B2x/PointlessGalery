@@ -7,7 +7,7 @@
     tools:context=".AddActivity">
 
     <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBarLayout"
+        android:id="@+id/barAdd"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:theme="@style/Theme.Gallery.AppBarOverlay"
@@ -41,18 +41,18 @@
         android:textSize="@dimen/title_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
+        app:layout_constraintTop_toBottomOf="@id/barAdd" />
 
     <ImageView
         android:id="@+id/imageViewPicture"
-        android:layout_width="310dp"
+        android:layout_width="270dp"
         android:layout_height="210dp"
         android:layout_marginTop="@dimen/little_margin"
         android:onClick="pickImage"
+        android:src="@drawable/placeholder"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/textViewPicture"
-        android:src="@drawable/placeholder" />
+        app:layout_constraintTop_toBottomOf="@id/textViewPicture" />
 
     <TextView
         android:id="@+id/textViewTitle"
@@ -112,7 +112,7 @@
     <EditText
         android:id="@+id/editTextDescription"
         android:layout_width="310dp"
-        android:layout_height="130dp"
+        android:layout_height="140dp"
         android:layout_marginTop="@dimen/little_margin"
         android:ems="10"
         android:inputType="textMultiLine"

@@ -10,6 +10,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Gallery">
         <activity
+            android:name=".ShowActivity"
+            android:exported="false"
+            android:label="@string/title_activity_show"
+            android:theme="@style/Theme.Gallery.NoActionBar" />
+        <activity
             android:name=".AboutActivity"
             android:exported="false"
             android:label="@string/title_activity_about"

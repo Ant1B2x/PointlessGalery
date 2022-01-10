@@ -77,12 +77,7 @@ class AddActivity : AppCompatActivity() {
         }
     }
 
-    fun imageViewToBytes(iv: ImageView): ByteArray {
-        val bitmap = (iv.getDrawable() as BitmapDrawable).bitmap
-        val stream = ByteArrayOutputStream()
-        bitmap.compress(Bitmap.CompressFormat.PNG, 0, stream)
-        return stream.toByteArray()
-    }
+
 
     fun savePicture(view: android.view.View) {
         if (pictureSelected) {
@@ -90,7 +85,7 @@ class AddActivity : AppCompatActivity() {
             println(binding.editTextLocation)
             println(binding.editTextDescription)
 
-            val blob = imageViewToBytes(binding.imageViewPicture)
+            val blob = Utils.imageViewToBytes(binding.imageViewPicture)
             val picture = Picture (
                 blob = blob,
                 title = binding.editTextTitle.text.toString(),
