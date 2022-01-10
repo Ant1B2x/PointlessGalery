@@ -37,18 +37,22 @@ class MainActivity : AppCompatActivity() {
             .fallbackToDestructiveMigration().build()
         pictureDao = db.pictureDao()
 
+        // Add header to the list
+        binding.picturesList.addHeaderView(layoutInflater.inflate(R.layout.pictures_list_header, null, false))
         // Load saved pictures
         reloadPicturesList()
 
         // Set listener on list
         binding.picturesList.setOnItemClickListener { parent, _, position, _ ->
-            val item = parent.adapter.getItem(position) as Picture
-            val intent = Intent(this, ShowActivity::class.java)
-            intent.putExtra("blob", item.blob)
-            intent.putExtra("title", item.title)
-            intent.putExtra("description", item.description)
-            intent.putExtra("location", item.location)
-            startActivity(intent)
+            if (position != 0) {
+                val item = parent.adapter.getItem(position) as Picture
+                val intent = Intent(this, ShowActivity::class.java)
+                intent.putExtra("blob", item.blob)
+                intent.putExtra("title", item.title)
+                intent.putExtra("description", item.description)
+                intent.putExtra("location", item.location)
+                startActivity(intent)
+            }
         }
     }
 

@@ -51,7 +51,7 @@ class AddActivity : AppCompatActivity() {
         ImagePicker.with(this)
             .crop()
             .compress(1024)
-            .maxResultSize(1080, 1080)
+            .maxResultSize(1024, 1024)
             .start()
     }
 
