@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Gallery</string>
+    <string name="action_about">About</string>
+    <string name="text_about">
+        ~~~ BEDEX Antoine ~~~\n
+        ### Mobile App Development - Fall 2022 ###
+    </string>
+    <string name="title_activity_add">Add Picture</string>
+    <string name="title_activity_about">About</string>
+</resources>
