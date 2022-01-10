@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,9 +7,11 @@
     tools:context=".AddActivity">
 
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/Theme.Gallery.AppBarOverlay">
+        android:theme="@style/Theme.Gallery.AppBarOverlay"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/toolbar"
@@ -17,17 +19,94 @@
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/Theme.Gallery.PopupOverlay" />
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/save"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
+        android:onClick="runMainActivity"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginEnd="@dimen/fab_margin"
-        android:layout_marginBottom="16dp"
-        app:srcCompat="@drawable/baseline_save_black_48"
-        android:onClick="runMainActivity" />
+        android:layout_marginBottom="@dimen/fab_margin"
+        app:srcCompat="@drawable/baseline_save_black_48" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <TextView
+        android:id="@+id/textViewPicture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:text="Picture"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:text="Title"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewPicture" />
+
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/little_margin"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+
+    <TextView
+        android:id="@+id/textViewDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:text="Description"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTitle" />
+
+    <EditText
+        android:id="@+id/editTextDescription"
+        android:layout_width="310dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="@dimen/little_margin"
+        android:ems="10"
+        android:inputType="textMultiLine"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewDescription" />
+
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:text="Location"
+        android:textSize="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDescription" />
+
+    <EditText
+        android:id="@+id/editTextLocation"
+        android:layout_width="310dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/little_margin"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLocation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
