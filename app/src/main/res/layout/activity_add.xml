@@ -41,40 +41,62 @@
         android:textSize="@dimen/title_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appBarLayout" />
+        app:layout_constraintTop_toBottomOf="@id/appBarLayout" />
 
     <ImageView
         android:id="@+id/imageViewPicture"
-        android:layout_width="212dp"
-        android:layout_height="144dp"
+        android:layout_width="310dp"
+        android:layout_height="210dp"
         android:layout_marginTop="@dimen/little_margin"
+        android:onClick="pickImage"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewPicture"
-        tools:srcCompat="@tools:sample/backgrounds/scenic"
-        android:onClick="pickImage" />
+        app:layout_constraintTop_toBottomOf="@id/textViewPicture"
+        android:src="@drawable/placeholder" />
 
     <TextView
         android:id="@+id/textViewTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/standard_margin"
+        android:layout_marginStart="@dimen/big_margin"
         android:text="Title"
         android:textSize="@dimen/title_size"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewPicture" />
+        app:layout_constraintTop_toBottomOf="@id/imageViewPicture" />
 
     <EditText
         android:id="@+id/editTextTitle"
-        android:layout_width="310dp"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/little_margin"
+        android:ems="10"
+        android:inputType="text"
+        app:layout_constraintEnd_toStartOf="@id/editTextLocation"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textViewTitle" />
+
+    <TextView
+        android:id="@+id/textViewLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/standard_margin"
+        android:layout_marginEnd="@dimen/big_margin"
+        android:text="Location"
+        android:textSize="@dimen/title_size"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageViewPicture" />
+
+    <EditText
+        android:id="@+id/editTextLocation"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/little_margin"
         android:ems="10"
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTitle" />
+        app:layout_constraintStart_toEndOf="@id/editTextTitle"
+        app:layout_constraintTop_toBottomOf="@id/textViewLocation" />
 
     <TextView
         android:id="@+id/textViewDescription"
@@ -85,39 +107,17 @@
         android:textSize="@dimen/title_size"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTitle" />
+        app:layout_constraintTop_toBottomOf="@id/editTextTitle" />
 
     <EditText
         android:id="@+id/editTextDescription"
         android:layout_width="310dp"
-        android:layout_height="90dp"
+        android:layout_height="130dp"
         android:layout_marginTop="@dimen/little_margin"
         android:ems="10"
         android:inputType="textMultiLine"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewDescription" />
-
-    <TextView
-        android:id="@+id/textViewLocation"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/standard_margin"
-        android:text="Location"
-        android:textSize="@dimen/title_size"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextDescription" />
-
-    <EditText
-        android:id="@+id/editTextLocation"
-        android:layout_width="310dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/little_margin"
-        android:ems="10"
-        android:inputType="text"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLocation" />
+        app:layout_constraintTop_toBottomOf="@id/textViewDescription" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
