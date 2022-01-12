@@ -5,9 +5,11 @@
       <map>
         <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.14166666666666666" />
         <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.14166666666666666" />
+        <entry key="app/src/main/res/layout-land/activity_main.xml" value="0.265625" />
         <entry key="app/src/main/res/layout/activity_about.xml" value="0.19739583333333333" />
         <entry key="app/src/main/res/layout/activity_add.xml" value="0.22" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_main_land.xml" value="0.19739583333333333" />
         <entry key="app/src/main/res/layout/activity_show.xml" value="0.19739583333333333" />
         <entry key="app/src/main/res/layout/content_add.xml" value="0.19739583333333333" />
         <entry key="app/src/main/res/layout/content_main.xml" value="0.19739583333333333" />
