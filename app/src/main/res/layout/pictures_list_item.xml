@@ -24,7 +24,7 @@
     <TextView
         android:id="@+id/itemDescription"
         android:layout_width="0dp"
-        android:layout_weight="30"
+        android:layout_weight="25"
         android:layout_height="wrap_content"
         android:textSize="@dimen/little_text"
         android:textAlignment="center" />
@@ -36,5 +36,14 @@
         android:layout_height="wrap_content"
         android:textSize="@dimen/little_text"
         android:textAlignment="center" />
+
+    <ImageView
+        android:id="@+id/itemFavorite"
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="20dp"
+        android:src="@drawable/outline_star_black_48"
+        android:visibility="invisible">
+    </ImageView>
 
 </LinearLayout>

@@ -7,13 +7,6 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.room.Room
 import com.example.gallery.databinding.ActivityMainBinding
-import android.app.Activity
-import android.view.View
-
-import android.widget.AdapterView
-
-import android.widget.AdapterView.OnItemClickListener
-import android.widget.Toast
 
 
 class MainActivity : AppCompatActivity() {
@@ -47,10 +40,12 @@ class MainActivity : AppCompatActivity() {
             if (position != 0) {
                 val item = parent.adapter.getItem(position) as Picture
                 val intent = Intent(this, ShowActivity::class.java)
+                intent.putExtra("pictureID", item.pictureID)
                 intent.putExtra("blob", item.blob)
                 intent.putExtra("title", item.title)
                 intent.putExtra("description", item.description)
                 intent.putExtra("location", item.location)
+                intent.putExtra("favorite", item.favorite)
                 startActivity(intent)
             }
         }
@@ -68,7 +63,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId) {
-            R.id.action_about -> {
+            R.id.actionAbout -> {
                 runAboutActivity(window.decorView.rootView)
                 true
             }

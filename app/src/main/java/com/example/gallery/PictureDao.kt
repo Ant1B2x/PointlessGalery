@@ -4,6 +4,10 @@ import androidx.room.Dao
 import androidx.room.Delete
 import androidx.room.Insert
 import androidx.room.Query
+import androidx.room.Update
+
+
+
 
 @Dao
 interface PictureDao {
@@ -15,4 +19,6 @@ interface PictureDao {
     fun insertAll(vararg pictures: Picture)
     @Delete
     fun delete(picture: Picture)
+    @Query("UPDATE picture SET favorite = :favorite WHERE pictureID = :pictureId")
+    fun updateFavorite(pictureId: Int, favorite: Boolean)
 }

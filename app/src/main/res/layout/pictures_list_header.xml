@@ -29,7 +29,7 @@
     <TextView
         android:id="@+id/headerDescription"
         android:layout_width="0dp"
-        android:layout_weight="30"
+        android:layout_weight="25"
         android:layout_height="wrap_content"
         android:textSize="@dimen/little_text"
         android:textStyle="bold"
@@ -45,5 +45,10 @@
         android:textStyle="bold"
         android:text="Location"
         android:textAlignment="center" />
+
+    <Space
+        android:layout_width="0dp"
+        android:layout_weight="5"
+        android:layout_height="0dp" />
 
 </LinearLayout>

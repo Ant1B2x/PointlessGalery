@@ -7,9 +7,6 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.ImageView
 import android.widget.TextView
-import android.graphics.BitmapFactory
-
-import android.graphics.Bitmap
 
 
 class PictureAdapter: BaseAdapter {
@@ -41,11 +38,14 @@ class PictureAdapter: BaseAdapter {
         val itemTitle = itemView.findViewById(R.id.itemTitle) as TextView
         val itemDescription = itemView.findViewById(R.id.itemDescription) as TextView
         val itemLocation = itemView.findViewById(R.id.itemLocation) as TextView
+        val itemFavorite = itemView.findViewById(R.id.itemFavorite) as ImageView
 
         itemPicture.setImageBitmap(Utils.bytesToBitmap(pictures[position].blob))
         itemTitle.text = pictures[position].title
         itemDescription.text = pictures[position].description
         itemLocation.text = pictures[position].location
+        if (pictures[position].favorite)
+            itemFavorite.visibility = View.VISIBLE
         return itemView
     }
 
