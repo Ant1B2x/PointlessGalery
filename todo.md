@@ -1,2 +1,1 @@
-Supprimer
 Landscape Page Accueil

@@ -8,7 +8,6 @@ import android.view.MenuItem
 import androidx.room.Room
 import com.example.gallery.databinding.ActivityMainBinding
 
-
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding

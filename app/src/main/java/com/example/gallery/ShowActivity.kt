@@ -6,6 +6,8 @@ import android.view.Menu
 import android.view.MenuItem
 import androidx.room.Room
 import com.example.gallery.databinding.ActivityShowBinding
+import android.app.AlertDialog
+
 
 class ShowActivity : AppCompatActivity() {
 
@@ -51,6 +53,10 @@ class ShowActivity : AppCompatActivity() {
                 )
                 true
             }
+            R.id.actionDelete -> {
+                showDeleteConfirmation()
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
     }
@@ -58,5 +64,20 @@ class ShowActivity : AppCompatActivity() {
     override fun onSupportNavigateUp(): Boolean {
         onBackPressed()
         return true
+    }
+
+    private fun showDeleteConfirmation() {
+        val builder: AlertDialog.Builder = AlertDialog.Builder(this)
+        builder.setTitle("Confirmation")
+        builder.setMessage(R.string.confirmation_message)
+        builder.setIcon(R.drawable.outline_delete_black_48)
+        builder.setPositiveButton(R.string.yes_reply) { dialog, _ ->
+            dialog.dismiss()
+            pictureDao.delete(intent.extras?.get("pictureID") as Int)
+            onBackPressed()
+        }
+        builder.setNegativeButton(R.string.no_reply) { dialog, _ -> dialog.dismiss() }
+        val alert: AlertDialog = builder.create()
+        alert.show()
     }
 }

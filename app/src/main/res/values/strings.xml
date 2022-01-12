@@ -3,6 +3,9 @@
     <string name="action_about">About</string>
     <string name="action_favorite">Toggle Favorite</string>
     <string name="action_delete">Delete</string>
+    <string name="confirmation_message">"Do you really want to delete this picture?"</string>
+    <string name="yes_reply">Yes</string>
+    <string name="no_reply">No</string>
     <string name="text_about">
         ~~~ BEDEX Antoine ~~~\n
         ### Mobile App Development - Fall 2022 ###
